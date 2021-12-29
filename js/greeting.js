@@ -4,6 +4,9 @@ const loginInput = document.querySelector("#login-form input:first-child");
 const loginInput = document.querySelector("#login-form input");
 */
 const greeting = document.querySelector("#greeting");
+const todoForm = document.querySelector("#todo-form");
+const todoList = document.querySelector("#todo-list");
+
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAMEKEY_KEY = "username";
@@ -19,6 +22,8 @@ function handleSubmittedLogin(event) {
 function paintGreeting(username) {
     greeting.innerText = `Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    todoForm.classList.remove(HIDDEN_CLASSNAME);
+    todoList.classList.remove(HIDDEN_CLASSNAME);
 }
 /*
 paintGreeting의 인자를 없애면 .. 이 안에 ... localstrage.getItem을 한번 더 해주어야 한다.
