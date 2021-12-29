@@ -1,4 +1,4 @@
-const clockText = document.querySelector("div#clock h1");
+const clockText = document.querySelector("#clock");
 
 function getClock() {
     const date = new Date();
