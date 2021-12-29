@@ -20,6 +20,10 @@ function paintGreeting(username) {
     greeting.innerText = `Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
+/*
+paintGreeting의 인자를 없애면 .. 이 안에 ... localstrage.getItem을 한번 더 해주어야 한다.
+인자를 없앨 것인가.. getItem을 두번 호출할 것인가...의 문제
+*/
 
 const savedUsername = localStorage.getItem(USERNAMEKEY_KEY);
 
