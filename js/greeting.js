@@ -6,6 +6,7 @@ const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 const todoForm = document.querySelector("#todo-form");
 const todoList = document.querySelector("#todo-list");
+const logout = document.querySelector("#logout");
 
 
 const HIDDEN_CLASSNAME = "hidden";
@@ -24,11 +25,9 @@ function paintGreeting(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME);
     todoForm.classList.remove(HIDDEN_CLASSNAME);
     todoList.classList.remove(HIDDEN_CLASSNAME);
+    logout.classList.remove(HIDDEN_CLASSNAME);
 }
-/*
-paintGreeting의 인자를 없애면 .. 이 안에 ... localstrage.getItem을 한번 더 해주어야 한다.
-인자를 없앨 것인가.. getItem을 두번 호출할 것인가...의 문제
-*/
+
 
 const savedUsername = localStorage.getItem(USERNAMEKEY_KEY);
 
@@ -38,3 +37,15 @@ if (savedUsername === null) {
 } else {
     paintGreeting(savedUsername);
 }
+
+
+function onLogout() {
+    if (confirm('Do you want to logout?')) {
+        localStorage.clear();
+        location.reload();
+    } else {
+
+    }
+}
+
+logout.addEventListener('click', onLogout)

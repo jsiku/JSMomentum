@@ -6,29 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum App</title>
+    <script src="https://kit.fontawesome.com/91984e3c28.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="weather">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <header>
+        <div id="weather">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
-    <h1 id="clock">00:00:00</h1>
-    <h1 class="hidden" id="greeting"></h1>
-    <form class="hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <input type="submit" value="Log In" />
-    </form>
-    <form id="todo-form" class="hidden">
-        <input type="text" placeholder="Write a To do and press enter" required></input>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
+    <main>
+        <h1 id="clock">00:00:00</h1>
+        <div>
+            <h2 class="hidden" id="greeting"></h2>
+            <button id="logout" class="hidden"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </div>
+        <div>
+            <form class="hidden" id="login-form">
+                <input required maxlength="15" type="text" placeholder="What is your name?" />
+                <button><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </form>
+            <form id="todo-form" class="hidden">
+                <input type="text" placeholder="Write a To do and press enter" required></input>
+            </form>
+            <ul id="todo-list"></ul>
+        </div>
+    </main>
+
+    <footer id="quote">
+        <blockquote></blockquote>
+        <cite></cite>
+    </footer>
+
+
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
